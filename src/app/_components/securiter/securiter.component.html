@@ -1,0 +1,24 @@
+<div class="flex">
+    <nb-card class="divflex">
+        <nb-card-header>Login</nb-card-header>
+        <nb-card-body>
+            <form [formGroup]="formGroup" (ngSubmit)="login()" >
+                <input class="inputform" nbInput type='text' placeholder="pseudo" formControlName="pseudo">
+                <input class="inputform" nbInput type='password' placeholder="Password"  formControlName="mdp">
+                <input class="inputform" nbButton type='submit' [disabled]="formGroup.invalid" href="">
+            </form>
+        </nb-card-body>
+    </nb-card>
+    <nb-card class="divflex">
+        <nb-card-header>Register</nb-card-header>
+        <nb-card-body>
+            <form [formGroup]="formGroupRegister" (ngSubmit)="envoie()" >
+                <input class="inputform" nbInput type='text' placeholder="nom" formControlName="nom">
+                <input class="inputform" nbInput type='password' placeholder="mdp"  formControlName="mdp">
+                <input class="inputform" nbInput type='text' placeholder="pseudo" formControlName="pseudo">
+                <input class="inputform" nbButton type='submit' [disabled]="formGroupRegister.invalid" href="">
+            </form>
+        </nb-card-body>
+    </nb-card>
+</div>
+

@@ -1,0 +1,21 @@
+.flex{
+    display: flex;
+}
+.divflex{
+    width: 50%;
+    margin: 10px;
+}
+.inputform{
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+@media screen and (min-width: 100px) and (max-width: 1000px) {
+    .flex{
+        display: block;
+    }
+    .divflex{
+        width: 100%;
+    }
+  }
