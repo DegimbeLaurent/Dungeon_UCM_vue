@@ -10,13 +10,13 @@ export class NavComponent implements OnInit {
 
   machin: NbMenuItem[]
 
-  constructor(
-    
-  ) { }
+  constructor() { }
 
   ngOnInit(): void {
     this.machin = [
-      { title: 'login', link: '/securiter', icon: 'home' }
+      { title: 'login', link: '/securiter', icon: 'arrow-circle-right' },
+      { title: 'Combat', link: '/combat', icon: 'moon'},
+      {title: 'Home Donjon', link: '/donjon', icon: 'home'}
       ];
   }
 

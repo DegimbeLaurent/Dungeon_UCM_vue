@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiEndPoint: "http://localhost:8080"
+  apiEndPoint: 'http://localhost:8080',
+  imageDonjon: 'https://i.pinimg.com/236x/99/79/7f/99797f6944d73caa95fa236a106823d7--tree-of-life-the-tree.jpg'
 };
 
 /*

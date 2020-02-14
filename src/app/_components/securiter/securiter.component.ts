@@ -3,7 +3,8 @@ import { FormGroup, Validators, FormControl } from '@angular/forms';
 import { SecuriterService } from 'src/app/_services/connection/securiter.service';
 import { Router } from '@angular/router';
 import { NbToastrService, NbDialogService } from '@nebular/theme';
-import {user} from "../../_models/user";
+import { User } from '../../_models/user';
+
 
 @Component({
   selector: 'app-securiter',
@@ -14,7 +15,7 @@ export class SecuriterComponent implements OnInit {
 
   formGroup: FormGroup;
   formGroupRegister: FormGroup;
-  usertemp: user;
+  usertemp: User;
 
   constructor(
     private secService: SecuriterService,
@@ -36,7 +37,7 @@ export class SecuriterComponent implements OnInit {
       ]))});
 
 
-      this.formGroupRegister = new FormGroup({
+    this.formGroupRegister = new FormGroup({
         nom: new FormControl(null, Validators.compose([
           Validators.required,
           Validators.maxLength(255),
@@ -52,23 +53,23 @@ export class SecuriterComponent implements OnInit {
 
   }
 
-  login(){
-    //envoyer les data a la api
+  login() {
+    // envoyer les data a la api
 
-    let json = this.formGroup.value;
+    const json = this.formGroup.value;
     this.secService.login(json).subscribe(
-      (token)=>{
+      (token) => {
         console.log(token);
-        localStorage.setItem('TOKEN',token);
+        localStorage.setItem('TOKEN', token);
         this.router.navigateByUrl('');
-        this.goodToast(4)
+        this.goodToast(4);
       },
-      (error)=>{
+      (error) => {
         console.log(error)
-        this.badToast(4)
+        this.badToast(4);
       },
-      ()=>{
-        console.log("Raté")
+      () => {
+        console.log('Raté');
       }
     );
   }
@@ -84,12 +85,12 @@ export class SecuriterComponent implements OnInit {
       'Echec',
     );
   }
-  envoie(){
-    console.log("coucou.txt")
-    let json = this.formGroupRegister.value;
+  envoie() {
+    console.log('coucou.txt')
+    const json = this.formGroupRegister.value;
     this.secService.register(json).subscribe(
-      ()=>{
-       this.goodToast(4)
+      () => {
+       this.goodToast(4);
       }
     );
   }

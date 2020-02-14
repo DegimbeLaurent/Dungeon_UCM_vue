@@ -1,4 +1,4 @@
-export interface loginModel{
-    pseudo:string;
+export interface LoginModel {
+    pseudo: string;
     mdp: string;
 }

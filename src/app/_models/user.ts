@@ -1,7 +1,7 @@
-export interface user{
-    id?:number;
-    nom:string;
+export interface User {
+    id?: number;
+    nom: string;
     mdp: string;
-    pseudo:string;
-    
+    pseudo: string;
 }
+
