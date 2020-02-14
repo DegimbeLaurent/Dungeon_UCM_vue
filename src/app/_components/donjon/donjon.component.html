@@ -1,1 +1,10 @@
-<p>donjon works!</p>
+<div>
+    <nb-list *ngFor="let h of heros">
+        <nb-list-item *ngIf="h.vie == true">
+            <nb-card>
+            <nb-card-header>{{h.nomPersonnage}} {{h.niveau}}</nb-card-header>
+            <nb-card-body>{{h.pointDeVie}} {{h.pointDExperience}} {{h.pointDeMana}}</nb-card-body>
+            </nb-card>
+        </nb-list-item>
+    </nb-list>
+</div>
