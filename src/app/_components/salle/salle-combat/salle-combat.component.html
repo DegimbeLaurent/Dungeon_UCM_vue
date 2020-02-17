@@ -1,1 +1,41 @@
-combat
+<div>
+    <nb-list *ngFor="let m of monsters">
+        <nb-list-item>
+            <div>
+                {{m.nomPersonnage}}
+            </div>
+            <div>
+                <img src="">
+            </div>
+            <div>
+                {{m.niveauMonstre}}
+            </div> 
+        </nb-list-item>
+    </nb-list>
+</div>
+<div>
+    <nb-list *ngFor="let h of listheros">
+        <nb-list-item>
+            <div>
+                {{h.nomPersonnage}}
+            </div>
+                <div>
+                    <img src="">
+                </div>
+            <div>
+                {{h.pointDeVie}} / {{h.pointDeVieMax}}
+            </div>
+            <div>
+                {{h.pointDeMana}} / {{h.pointDeManaMax}}
+            </div>
+            <div>
+                {{h.pointDEndurance}} / {{h.pointDEnduranceMax}}
+            </div>
+            <div>
+                <input type="submit" value="Attaque">
+                <input type="submit" value="Object">
+                <input type="button" value="Fuite">
+            </div>
+        </nb-list-item>
+    </nb-list>
+</div>
