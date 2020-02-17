@@ -9,9 +9,34 @@ import { Hero } from 'src/app/_models/Personnage/Hero/Hero';
 export class DonjonComponent implements OnInit {
 
   heros: Hero[];
+  liste:string[];
+  valide : boolean;
 
   constructor() { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {  
+    
+  }
+
+  selectionner(item : Hero){
+    // add de la liste 
+  }
+
+  retirer(item : Hero){
+    // delete de la liste
+  }
+
+  // 
+  selectionHero(hero : Hero): boolean{
+    this.valide = false;
+    this.heros.forEach(x => {if(x == hero){
+      this.valide = true;
+    }});
+    return this.valide;
+  }
+
+  envoyer(){
+    // renvoie equipe ou la garde et la renvoie dans le donjon
+  }
 
 }

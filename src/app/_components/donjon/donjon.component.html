@@ -1,10 +1,32 @@
-<div>
-    <nb-list *ngFor="let h of heros">
-        <nb-list-item *ngIf="h.vie == true">
-            <nb-card>
-            <nb-card-header>{{h.nomPersonnage}} {{h.niveau}}</nb-card-header>
-            <nb-card-body>{{h.pointDeVie}} {{h.pointDExperience}} {{h.pointDeMana}}</nb-card-body>
-            </nb-card>
-        </nb-list-item>
-    </nb-list>
-</div>
+<nb-card>
+    <div>
+        <nb-card>
+                <nb-list>
+                    <nb-list-item *ngFor="let h of heros">
+                    <nb-card-header>Personnage</nb-card-header>
+                        <nb-card-body>
+                            <div>
+                                Nom : {{h.nomPersonnage}}
+                            </div>
+                            <div>
+                                Niveau : {{h.niveau}}
+                            </div>
+                            <div>
+                                Point de vie : {{h.pointDeVie}}
+                            </div>
+                            <div>
+                                Point de mana : {{h.pointDeMana}}
+                            </div>
+                        </nb-card-body>
+                        <nb-card-footer>
+                            <input type="button" value="Joindre à l'equipe" (click)="selectionner(h)" [disabled]="selectionHero(h)">
+                            <input type="button" value="Supprimer de l'equipe" (click)="retirer(h)" [disabled]="!selectionHero(h)">
+                        </nb-card-footer>
+                    </nb-list-item>
+                </nb-list>
+        </nb-card>
+    </div>
+    <nb-card-footer>
+        <input type="submit" value="Commencer la conquête" >
+    </nb-card-footer>
+</nb-card>

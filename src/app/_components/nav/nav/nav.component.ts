@@ -16,7 +16,10 @@ export class NavComponent implements OnInit {
     this.machin = [
       { title: 'login', link: '/securiter', icon: 'arrow-circle-right' },
       { title: 'Combat', link: '/combat', icon: 'moon'},
-      {title: 'Home Donjon', link: '/donjon', icon: 'home'}
+      {title: 'Home Donjon', link: 'combat/donjon', icon: 'home'},
+      {title: 'salle', link: 'salle'},
+      {title: 'salle-relaxe', link: 'salleRelax'},
+      {title: 'salle-Combat', link: 'salleCombat'},
       ];
   }
 
