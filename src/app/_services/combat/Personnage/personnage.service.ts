@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
+import { CombatStarDTO } from 'src/app/_models/combat/CombatStarDTO';
+import { CombatTourDTO } from 'src/app/_models/combat/CombatTourDTO';
 
 
 @Injectable({
@@ -11,19 +13,16 @@ export class PersonnageService {
 
   constructor(private httpPlayer: HttpClient) { }
 
-  retourHero(anys : any[]) : Observable<any[]> {
-    console.log(environment.combattre + '/lancer', anys);
-    return this.httpPlayer.post<any[]>(environment.combattre + '/lancer', anys);
+  retourHero(combatStarDTO : CombatStarDTO) : Observable<CombatStarDTO> {
+    return this.httpPlayer.post<CombatStarDTO>(environment.combattre + '/lancer',{});
   }
 
-  retourhM(anys : any[]): Observable<any[]>{
-    console.log(environment.combattre + '/choix', anys);
-    return this.httpPlayer.post<any>(environment.combattre + '/choix', anys );
+  retourhM(anys : CombatTourDTO): Observable<CombatTourDTO>{
+    return this.httpPlayer.post<CombatTourDTO>(environment.combattre + '/choix', anys );
   }
 
-  retourPersonnage(): Observable<any[]>{
-    console.log(environment.combattre + '/getlancer');
-    return this.httpPlayer.get<any>(environment.combattre + '/getlancer');
+  retourPersonnage(): Observable<CombatStarDTO>{
+    return this.httpPlayer.get<CombatStarDTO>(environment.combattre + '/getlancer');
   }
   
 

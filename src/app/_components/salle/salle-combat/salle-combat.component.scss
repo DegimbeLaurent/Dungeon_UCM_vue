@@ -1,0 +1,25 @@
+#hero{
+    display: flex;
+}
+.perso{
+    width:20%;
+}
+.elem{
+    display: flex;
+    flex-direction: column;
+}
+p{
+    display: inline-block;
+}
+.info{
+    width: 100%;
+}
+.state{
+    width: 100%;
+}
+.image{
+    width: 100%;
+    img{
+        width: 20%;
+    }
+}

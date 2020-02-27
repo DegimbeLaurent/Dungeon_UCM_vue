@@ -1,41 +1,46 @@
-<div>
-    <nb-list *ngFor="let m of monsters">
-        <nb-list-item>
-            <div>
-                {{m.nomPersonnage}}
+
+<div id="hero">
+    <nb-list *ngFor="let h of combatStarDTO?.joueurs" class="perso">
+        <nb-list-item class="elem">
+            <div class="info">
+                <p>{{h.nomPersonnage}} lvl:{{h.niveau}}</p>
+                    
             </div>
-            <div>
-                <img src="">
+            <div class="image">
+                <img src="../../../../assets/img/tempPerso.png">
             </div>
-            <div>
-                {{m.niveauMonstre}}
-            </div> 
+            <div class="state">
+                <div>
+                     <p>{{h.pointDeVie}} / {{h.pointDeVieMax}} PV</p>
+                </div>
+                <div>
+                    <p>{{h.pointDeMana}} / {{h.pointDeManaMax}} PM</p>
+                </div>
+            </div>
         </nb-list-item>
     </nb-list>
 </div>
-<div>
-    <nb-list *ngFor="let h of listheros">
-        <nb-list-item>
-            <div>
-                {{h.nomPersonnage}}
+<div id="hero">
+    <nb-list *ngFor="let m of combatStarDTO?.monstre" class="perso">
+        <nb-list-item class="elem">
+            <div class="info">
+                <p>{{m.nomPersonnage}} lvl:{{m.niveau}}</p>
+                    
             </div>
-                <div *ngIf="">
-                    <img src="">
+            <div class="image">
+                <img src="../../../../assets/img/tempMonstre.png">
+            </div>
+            <div class="state">
+                <div>
+                     <p>{{m.pointDeVie}} / {{m.pointDeVieMax}} PV</p>
                 </div>
-            <div>
-                {{h.pointDeVie}} / {{h.pointDeVieMax}}
-            </div>
-            <div>
-                {{h.pointDeMana}} / {{h.pointDeManaMax}}
-            </div>
-            <div>
-                {{h.pointDEndurance}} / {{h.pointDEnduranceMax}}
-            </div>
-            <div>
-                <input type="submit" value="Attaque">
-                <input type="submit" value="Object">
-                <input type="button" value="Fuite">
+                <div>
+                    <p>{{m.pointDeMana}} / {{m.pointDeManaMax}} PM</p>
+                </div>
             </div>
         </nb-list-item>
     </nb-list>
+</div>
+<div >
+    <button nbButton (click)="frapper()">frapper</button>
 </div>
