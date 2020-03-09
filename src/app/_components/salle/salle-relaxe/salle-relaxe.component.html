@@ -1,1 +1,119 @@
-<p>salle-relaxe works!</p>
+<!-- 
+<div class="fond">
+    <div id="barre-persos">
+        <div *ngFor="let h of combatStarDTO?.joueurs" class="bloc-joueurs">
+            <div class="info">
+                <p class="text-info"></p>
+            </div>
+            <div class="barre-vie">
+                <div class="etat-vie">
+
+                </div>
+            </div>
+            <div class="barre-mana">
+                <div class="etat-mana">
+
+                </div>
+            </div>
+        </div>
+        <div *ngFor="let h of combatStarDTO?.monstre" class="bloc-monstre">
+            <div class="info">
+                <p class="text-info"></p>
+            </div>
+            <div class="barre-vie">
+                <div class="etat-vie">
+
+                </div>
+            </div>
+            <div class="barre-mana">
+                <div class="etat-mana">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="action-info">
+        <button nbButton id="button-action">Action</button>
+        <p id="resume"></p>
+    </div>
+
+    <div>
+        <div *ngIf="boolJoueur">
+            <button nbButton (click)="choixFrapper()">Attaquer</button>
+            <button nbButton>Objet</button>
+            <button nbButton>Fuir</button>
+        </div>
+        <div *ngIf="boolCap">
+            <button nbButton *ngFor="let h of combatStarDTO?.joueurs[tourDe].capacites " (click)="frapper(h.id)">{{h.nomCapacite}}</button>
+        </div>
+    </div>
+
+    <div id="personnage-image">
+        <div class="hero">
+            <nb-list *ngFor="let h of combatStarDTO?.joueurs" class="perso">
+                <nb-list-item class="elem">
+                    <div class="image">
+                        <img src="../../../../assets/img/p.png">
+                    </div>
+                </nb-list-item>
+            </nb-list>
+        </div>
+        <div class="hero">
+            <nb-list *ngFor="let h of combatStarDTO?.monstre" class="perso">
+                <nb-list-item class="elem">
+                    <div class="image">
+                        <img src="../../../../assets/img/{{m.nomPersonnage}}.png">
+                    </div>
+                </nb-list-item>
+            </nb-list>
+        </div>
+    </div>
+</div>
+
+<div class="fond">
+        <div id="personnage">
+        <div class="hero">
+            <nb-list *ngFor="let h of combatStarDTO?.joueurs" class="perso">
+                <nb-list-item class="elem">
+                    <div class="info">
+                        <p>{{h.nomPersonnage}} lvl:{{h.niveau}}</p>
+                        <p>{{h.pointDeVie}} / {{h.pointDeVieMax}} PV</p> 
+                        <p>{{h.pointDeMana}} / {{h.pointDeManaMax}} PM</p>   
+                    </div>
+                    <div class="image">
+                        <img src="../../../../assets/img/p.png">
+                    </div>
+                </nb-list-item>
+            </nb-list>
+        </div>
+        <div class="hero">
+            <nb-list *ngFor="let m of combatStarDTO?.monstre, let i = index" class="perso">
+                <nb-list-item class="elem">
+                    <div *ngIf="boolMonstre">
+                        <button nbButton (click)="choixcible(i)">cible {{i}}</button>
+                    </div>
+                    <div class="info">
+                        <p>{{m.nomPersonnage}} lvl:{{m.niveau}}</p>
+                        <p>{{m.pointDeVie}} / {{m.pointDeVieMax}} PV</p>
+                        <p>{{m.pointDeMana}} / {{m.pointDeManaMax}} PM</p>
+                    </div>
+                    <div class="image">
+                        <img src="../../../../assets/img/{{m.nomPersonnage}}.png">
+                    </div>
+                </nb-list-item>
+            </nb-list>
+        </div>
+        <div id="choix">
+            <button nbButton (click)="action()">action</button>
+            <div *ngIf="boolJoueur">
+                <button nbButton (click)="choixFrapper()">frapper</button>
+                <button nbButton >objet</button>
+                <button nbButton >fuir</button>
+            </div>
+            <div *ngIf="boolCap">
+                <button nbButton *ngFor="let h of combatStarDTO?.joueurs[tourDe].capacites " (click)="frapper(h.id)">{{h.nomCapacite}}</button>
+            </div>
+        </div>
+    </div>
+    </div> -->

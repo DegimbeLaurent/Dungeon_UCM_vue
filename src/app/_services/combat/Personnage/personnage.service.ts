@@ -17,8 +17,8 @@ export class PersonnageService {
     return this.httpPlayer.post<CombatStarDTO>(environment.combattre + '/lancer',{});
   }
 
-  retourhM(anys : CombatTourDTO): Observable<CombatTourDTO>{
-    return this.httpPlayer.post<CombatTourDTO>(environment.combattre + '/choix', anys );
+  retourhM(anys : CombatStarDTO): Observable<CombatStarDTO>{
+    return this.httpPlayer.post<CombatStarDTO>(environment.combattre + '/choix', anys );
   }
 
   retourPersonnage(): Observable<CombatStarDTO>{

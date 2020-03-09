@@ -1,46 +1,87 @@
+<div class="fond">
+        <div id="barre-persos">
+            <div *ngFor="let h of combatStarDTO?.joueurs" class="bloc">
+                <div class="info">
+                <p class="text-info">{{h.nomPersonnage}} \ lvl:{{h.niveau}}</p>
+                </div>
+                <div class="barre">
+                    <div class="etatr"  [ngStyle]="stat(h.pointDeVie ,h.pointDeVieMax)" >
 
-<div id="hero">
-    <nb-list *ngFor="let h of combatStarDTO?.joueurs" class="perso">
-        <nb-list-item class="elem">
-            <div class="info">
-                <p>{{h.nomPersonnage}} lvl:{{h.niveau}}</p>
-                    
-            </div>
-            <div class="image">
-                <img src="../../../../assets/img/tempPerso.png">
-            </div>
-            <div class="state">
-                <div>
-                     <p>{{h.pointDeVie}} / {{h.pointDeVieMax}} PV</p>
+                    </div>
                 </div>
-                <div>
-                    <p>{{h.pointDeMana}} / {{h.pointDeManaMax}} PM</p>
+                <div class="barre">
+                    <div class="etatb" [ngStyle]="stat(h.pointDeMana ,h.pointDeManaMax)">
+    
+                    </div>
                 </div>
             </div>
-        </nb-list-item>
-    </nb-list>
-</div>
-<div id="hero">
-    <nb-list *ngFor="let m of combatStarDTO?.monstre" class="perso">
-        <nb-list-item class="elem">
-            <div class="info">
-                <p>{{m.nomPersonnage}} lvl:{{m.niveau}}</p>
-                    
-            </div>
-            <div class="image">
-                <img src="../../../../assets/img/tempMonstre.png">
-            </div>
-            <div class="state">
-                <div>
-                     <p>{{m.pointDeVie}} / {{m.pointDeVieMax}} PV</p>
+            <div *ngFor="let h of combatStarDTO?.monstre" class="bloc">
+                <div class="info">
+                    <p class="text-info">{{h.nomPersonnage}} \ lvl:{{h.niveau}}</p>
                 </div>
-                <div>
-                    <p>{{m.pointDeMana}} / {{m.pointDeManaMax}} PM</p>
+                <div class="barre">
+                    <div class="etatr" [ngStyle]="stat(h.pointDeVie ,h.pointDeVieMax)">
+    
+                    </div>
+                </div>
+                <div class="barre">
+                    <div class="etatb" [ngStyle]="stat(h.pointDeMana ,h.pointDeManaMax)">
+    
+                    </div>
                 </div>
             </div>
-        </nb-list-item>
-    </nb-list>
-</div>
-<div >
-    <button nbButton (click)="frapper()">frapper</button>
-</div>
+        </div>
+    
+        <div id="action">
+            <button  nbButton (click)="action()" id="button">Action</button>
+            <p id="resume"></p>
+        </div>
+    
+        <div *ngIf="boolaction" id="actiojoueur">
+            <div *ngIf="boolChoixAction" >
+                <p>Choissiez une action</p>
+                <div>
+                    <button nbButton (click)="choixaction(1)" >Attaquer</button>
+                    <button nbButton (click)="choixaction(2)" >Objet</button>
+                    <button nbButton (click)="choixaction(3)" >Fuir</button>
+                </div>
+            </div>
+
+            <div *ngIf="boolchoixMonstre" >
+                <div *ngFor="let m of combatStarDTO?.monstre , let i = index">
+                    <button  *ngIf="live(m.pointDeVie)" nbButton (click)="choixcible(i)">{{m.nomPersonnage}}</button>
+                </div>
+            </div>
+
+            <div *ngIf="boolCap">
+                <p>Choissiez une capacites</p>
+                <button nbButton *ngFor="let h of combatStarDTO?.joueurs[tourDe].capacites " (click)="choixcap(h.id,h.longeurDesDegats)">{{h.nomCapacite}}</button>
+            </div>
+        </div>
+    
+        <div id="personnage">
+            <div class="hero">
+                <nb-list *ngFor="let h of combatStarDTO?.joueurs" class="perso">
+                    <nb-list-item class="elem">
+                        <div class="image" >
+                            <img *ngIf="live(h.pointDeVie)" src="../../../../assets/img/p.png">
+                        </div>
+                    </nb-list-item>
+                </nb-list>
+            </div>
+
+            <div class="entre">
+
+            </div>
+
+            <div class="hero">
+                <nb-list *ngFor="let h of combatStarDTO?.monstre" class="perso">
+                    <nb-list-item class="elem">
+                        <div class="image">
+                            <img *ngIf="live(h.pointDeVie)" src="../../../../assets/img/{{h.nomPersonnage}}.png">
+                        </div>
+                    </nb-list-item>
+                </nb-list>
+            </div>
+        </div>
+    </div>

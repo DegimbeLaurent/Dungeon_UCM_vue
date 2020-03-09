@@ -1,7 +1,7 @@
 <nb-layout>
   <nb-layout-header fixed >
       <nb-actions>
-        <nb-action icon="menu" ></nb-action>
+        <nb-action (itemClick)="hovermenu()" icon="menu" ></nb-action>
       </nb-actions>
       <div>
         <div style="width: 25%;">
@@ -15,7 +15,7 @@
   </nb-layout-header>
 
   <nb-sidebar >
-    <app-nav>
+    <app-nav id="sidebar">
     </app-nav>
   </nb-sidebar>
 

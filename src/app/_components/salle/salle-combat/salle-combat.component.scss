@@ -1,25 +1,89 @@
-#hero{
-    display: flex;
-}
-.perso{
-    width:20%;
-}
-.elem{
-    display: flex;
-    flex-direction: column;
-}
-p{
-    display: inline-block;
-}
-.info{
+#barre-persos{
     width: 100%;
-}
-.state{
-    width: 100%;
-}
-.image{
-    width: 100%;
-    img{
-        width: 20%;
+    height: 10%;
+    display:flex;
+    flex-wrap:wrap;
+    .bloc{
+        width: 12.5%;
+        background-color: gray;
+        border:solid 2px;
+        border-color: black;
+
+        p{
+            color: white;
+        }
+        .barre{
+            width: 95%;
+            height: 5px;
+            margin: 2.5%;
+            background-color: black;
+        }
+        .etatr{
+
+            height: 5px;
+            background-color: brown;
+        }
+        .etatb{
+            height: 5px;
+            background-color: blue;
+        }
+        
     }
+}
+#action{
+    margin-top: 3%;
+}
+#actiojoueur{
+    position: absolute;
+    top: 44%;
+    right: 34%;
+    width: 30%;
+    height: 13%;
+    background-color: darkslategrey;
+    button{
+        width: 25%;
+        height: 45%;
+        p{
+            width: 5px;
+        }
+    }
+    div{
+        width: 100%;
+        p{
+            margin-right: 50px;
+        }
+        div{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            justify-content: space-around;  
+        }
+    }
+}
+#personnage{
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    .hero{
+        width: 38%;
+        display: flex;
+        flex-wrap: wrap;
+        .perso{
+            width: 25%;
+            img{
+                width: 60%;
+            }
+        }
+    }
+    .entre{
+        width: 10%;
+    }
+}
+.fond{
+    background-image: url("../../../../assets/img/fond.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
 }
