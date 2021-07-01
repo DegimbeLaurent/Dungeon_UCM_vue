@@ -1,27 +1,27 @@
-# Apdung
+# Dungeon_UCM
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.1.
+Project with my friend, who aims to train on Angular
 
-## Development server
+## Who did the project 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* [Thomas](https://github.com/WattecampsProg)
+* [Laurent Degimbe](https://github.com/DegimbeLaurent)
 
-## Code scaffolding
+## What is that ?
+It's a little turn-based game. where we control an adventurous team against waves of monsters
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## When did you work on it ?
+15/07/20 -> 25/07/20
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Where have you been? What were you doing ?
+Realized during the web developer training at Technobel
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Progress…
+it can always be changed
+## What's in it ?
+The site is composed of 5 pages. a home page, a menu page, a photo page according to the theme of the restaurant, a restaurant page including the location and a contact page.
+## How do we install it ?
+You can create a branch from development and after do your stuff do a pull request on the same branch .
+## Where is that from ?
+it comes from a challenge proposed by Technobel to do with a team of 2 people.
